@@ -11,7 +11,6 @@ app.get('/', async (req: Request, res: Response) => {
 
 app.post('/', async (req: Request, res: Response) => {
   const {cep} = req.body
-  console.log(req.body);
   
   await createHistoric(cep)
   res.send("Historico criado com sucesso!").status(201)
